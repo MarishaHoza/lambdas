@@ -11,8 +11,8 @@ public class Task {
     private String title;
     private String description;
     private String status = null;
-    private String assignee;
-    private String imgUrl;
+    private String assignee = null;
+    private String imgUrl = null;
 
     private ArrayList<HistoryObj> history;
 

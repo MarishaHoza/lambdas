@@ -27,15 +27,9 @@ public class DynamoSave {
             return new Task();
         }
 
-        Task newTask = new Task(task.getId(), task.getTitle(), task.getDescription(), task.getStatus(), task.getAssignee(), task.getImgUrl());
+        Task newTask = new Task(task.getId(), task.getTitle(), task.getDescription(), "Available", "null", "null");
 
-        if (newTask.getStatus() == null || !newTask.getStatus().equals("Finished") ) {
-            newTask.updateStatus();
-            if ( task.getHistory() != null ){
-                newTask.setHistory(task.getHistory());
-            }
-            newTask.addHistory(new HistoryObj("--> " + newTask.getStatus()));
-        }
+        newTask.addHistory(new HistoryObj("--> " + newTask.getStatus()));
 
         final AmazonDynamoDB ddb = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper ddbMapper = new DynamoDBMapper(ddb);
