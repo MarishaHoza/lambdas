@@ -9,9 +9,7 @@ const dynamodb = new AWS.DynamoDB();
 const ddbClient = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async (event, context) => {
-  console.log("EVENT:", event);
-  console.log("CONTEXT:", context);
-  
+
   let params = {
     ExpressionAttributeValues: {
       ':name' : `${event.pathParameters.id}`
@@ -28,6 +26,6 @@ exports.handler = async (event, context) => {
       "Access-Control-Allow-Origin" : "*",
       "Access-Control-Allow-Credentials" : true
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data.Items)
   }
 };
