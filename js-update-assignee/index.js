@@ -7,7 +7,6 @@ AWS.config.update({ region: 'us-west-2' });
 
 const dynamodb = new AWS.DynamoDB();
 const ddbClient = new AWS.DynamoDB.DocumentClient();
-// const docClient = new AWS.DynamoDB.DocumentClient()
 
 
 exports.handler = async (event, context) => {
