@@ -29,7 +29,7 @@ public class DynamoSave {
 
         Task newTask = new Task(task.getId(), task.getTitle(), task.getDescription(), "Available", "null", "null");
 
-        newTask.addHistory(new HistoryObj("--> " + newTask.getStatus()));
+        newTask.addHistory(new HistoryObj("Task created"));
 
         final AmazonDynamoDB ddb = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper ddbMapper = new DynamoDBMapper(ddb);
