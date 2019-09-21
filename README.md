@@ -3,6 +3,8 @@
 ### [API Gateway Endpoint](https://vv7fgjnxgi.execute-api.us-west-2.amazonaws.com/dev)
 ### [React Front-End Endpoint](http://taskmaster-frontend-marisha.s3-website-us-west-2.amazonaws.com/)
 
+_________________________________
+
 ## java-save
 This lambda function saves new task items to the dynamoDB database.
 This `POST` route is exposed at `/tasks`
@@ -30,11 +32,13 @@ This lambda function is automatically invoked on dynamoDB changes. The function 
 This lambda function deletes a specific task
 This `DELETE` route is exposed at `/tasks/{id}`
 
+_____________________
 
-## helpful docs
+# Collab
+
+## Helpful docs
 - [DynamoDB Examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.03.html#GettingStarted.NodeJs.03.06)
 - [Examples using UpdateItem](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateItem.html)
-
 
 ## Collaborators
 - Peter Lee
